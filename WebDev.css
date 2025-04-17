@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 70px;
+    background-color: #f0b028;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #ece2e2;
+    height: 60px;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    position: fixed;
+}
+
+.navlinks {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navlinks a {
+    text-decoration: none;
+    color: rgb(17, 15, 15);
+    transition: color 0.3s;
+    margin-left: 30px;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.navlinks li {
+    padding: 10px;
+}
+
+.navlinks a:hover {
+    color: #0d8af0;
+    
+}
+#btn1 :hover{
+    background-color:#0d8af0 ;
+}
+
+.logo img {
+    height: 45px;
+}
+
+.shopnow {
+    background-color: #f0b028;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+
+.hero {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    height: 100vh;
+    background-color: #f0b028;
+    padding: 0 80px;
+}
+
+.hero-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 40px;
+    color: #f08888;
+    max-width: 600px;
+}
+
+.hero-image {
+    flex: 1;
+    background-image: url('assets2/image/FL.png'); 
+    background-size: contain;
+    background-position: center right;
+    background-repeat: no-repeat;
+}
+
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.subtext {
+    color: #c0392b;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.desc {
+    color: #f8f8f8;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.discount-box h2 {
+    font-size: 40px;
+    color: #5f8cb9;
+}
+
+.discount-box span {
+    font-size: 60px;
+    color: #00bcd4;
+}
+
+.shop-btn {
+    background: #4a8df1;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s;
+    width: fit-content;
+}
+
+.shop-btn:hover {
+    background: #444;
+}
+
+footer {
+    color: #181717;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.categories {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 60px 80px;
+    background-color: #fae8cc;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    flex: 1 1 300px;
+    max-width: 320px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #666;
+    padding: 0 15px 20px;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
