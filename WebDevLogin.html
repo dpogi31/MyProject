@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <link rel="stylesheet" href="WebDev.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="login-bg">
+    <div class="login-container">
+      <h2 id="myH2">User Login</h2>
+
+      <div id="warning" class="warning-message" style="display: none;"></div>
+
+      <input id="myUser" type="text" placeholder="Username"><br><br>
+      <input id="myPass" type="password" placeholder="Password"><br>
+
+      <input type="checkbox" id="myCheckbox">
+      <label for="myCheckbox">Save this Info?</label><br>
+
+      <button id="mySubmit" class="buttons" onclick="handleLogin()">Login</button>
+
+      <div class="google-login">
+        <p style="font-family: 'Roboto'; color: white;">or</p>
+        <a href="#" class="google-btn">
+          <img src="assets2/image/GG.png" alt="Google icon">
+          Sign in with Google
+        </a>
+      </div>
+
+      <button id="myReg" class="buttons" onclick="window.location.href='WebDevReg.html'">Create new Account</button>
+    </div>
+  </div>
+
+  <script>
+    // Handle Login Button Click
+    function handleLogin() {
+      const username = document.getElementById('myUser').value;
+      const password = document.getElementById('myPass').value;
+      const warning = document.getElementById('warning');
+
+      // Check if fields are empty
+      if (username === "" || password === "") {
+        // Show warning message if fields are empty
+        warning.style.display = "block";
+        warning.textContent = "Please fill in both username and password.";
+      } else {
+        // Hide warning message if both fields are filled
+        warning.style.display = "none";
+        // Redirect to WebDev.html page on successful login
+        window.location.href = "WebDev.html";
+      }
+    }
+    
+  </script>
+</body>
+</html>

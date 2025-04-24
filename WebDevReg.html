@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="WebDev.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="register-bg">
+        <div class="register-container">
+            <div id="register-message"></div>
+            <h2>Create new Account</h2>
+            <p>It's Quick and Easy</p>
+            <form id="registrationForm" action="#" method="POST">
+
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+
+                <label>Gender:</label>
+                <div class="gender-options">
+                    <label><input type="radio" name="gender" value="male" required> Male</label>
+                    <label><input type="radio" name="gender" value="female" required> Female</label>
+                    <label><input type="radio" name="gender" value="other" required> Custom</label>
+                </div><br>
+
+                <label>Age:</label>
+                <select name="age" required>
+                    <option value="" disabled selected>Select your age</option>
+                    <option value="under_18">Under 18</option>
+                    <option value="18-25">18-25</option>
+                    <option value="26-35">26-35</option>
+                    <option value="36-50">36-50</option>
+                    <option value="above_50">Above 50</option>
+                </select>
+
+                <button type="submit" class="buttons">Sign Up</button>
+            </form>
+            <button id="myBack" class="buttons" onclick="window.location.href='WebDevLogin.html'">Back</button>
+        </div>
+    </div>
+
+</body>
+
+<footer>
+    <h1>Fits & Finds All rights reserved</h1>
+</footer>
+<script>
+   document.getElementById('registrationForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission to the server
+
+    var password = document.querySelector('input[name="password"]').value;
+    var confirmPassword = document.querySelector('input[name="confirm_password"]').value;
+    var registerMessage = document.getElementById('register-message');
+
+    if (password !== confirmPassword) {
+        registerMessage.textContent = "Passwords do not match!";
+        registerMessage.style.color = "red";
+        return;
+    }
+
+    registerMessage.textContent = "Registration completed successfully! You will be redirected to the login page shortly.";
+registerMessage.style.color = "#ffffff"; // White text for contrast
+registerMessage.style.fontFamily = "'Roboto', sans-serif"; // Clean, modern font
+registerMessage.style.fontSize = "16px"; // Appropriate font size
+registerMessage.style.fontWeight = "400"; // Regular font weight for a polished look
+registerMessage.style.textAlign = "center"; // Centered text
+registerMessage.style.padding = "12px 25px"; // More padding for a spacious feel
+registerMessage.style.border = "none"; // No border for a clean design
+registerMessage.style.borderRadius = "8px"; // Slightly rounded corners for a modern touch
+registerMessage.style.backgroundColor = "#4CAF50"; // Modern green background for success
+registerMessage.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.1)"; // Subtle shadow for depth
+registerMessage.style.transition = "opacity 0.5s ease-in-out"; // Smooth transition effect
+
+
+    // Add debugging to check if the redirection is working
+    console.log("Redirecting to login...");
+
+    setTimeout(function() {
+        // Test redirection
+        window.location.href = 'WebDevLogin.html'; // Adjust path if needed
+    }, 2000);
+});
+
+</script>
+
+</html>
